@@ -1,0 +1,51 @@
+.recos-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 28px 20px;
+  margin-bottom: 20px;
+}
+
+.block-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.recos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reco-card {
+  display: flex;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border-left: 3px solid var(--accent);
+  transition: background 0.2s;
+}
+
+.reco-card:hover {
+  background: rgba(0, 229, 160, 0.05);
+}
+
+.reco-num {
+  color: var(--accent);
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+  width: 24px;
+  padding-top: 1px;
+}
+
+.reco-text {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #d0d0e8;
+}

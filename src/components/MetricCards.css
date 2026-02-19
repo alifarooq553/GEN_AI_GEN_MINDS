@@ -1,0 +1,56 @@
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+
+.metric-card.green::before { background: linear-gradient(90deg, var(--accent), transparent); }
+.metric-card.purple::before { background: linear-gradient(90deg, var(--accent2), transparent); }
+.metric-card.orange::before { background: linear-gradient(90deg, var(--warn), transparent); }
+.metric-card.red::before { background: linear-gradient(90deg, var(--danger), transparent); }
+
+.metric-card:hover { transform: translateY(-2px); }
+
+.metric-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.metric-card.green .metric-label { color: var(--accent); }
+.metric-card.purple .metric-label { color: var(--accent2); }
+.metric-card.orange .metric-label { color: var(--warn); }
+.metric-card.red .metric-label { color: var(--danger); }
+
+.metric-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.metric-sub {
+  font-size: 11px;
+  color: var(--muted);
+}
